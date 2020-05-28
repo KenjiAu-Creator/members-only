@@ -20,6 +20,26 @@
       </div>
     <% end %>
 
+    <div id="navbar" class="navbar-menu">
+      <div class="account-actions is-grouped">
+        <% if user_signed_in? %>
+          <p>
+            <%= link_to current_user.email, edit_user_registration_path %>
+          </p>
+          <p>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button is-info" %>
+          </p>
+          <% else %>
+            <p>
+              <%= link_to "Log In", new_user_session_path %>
+            </p>
+            <p>
+              <%= link_to "Sign up!", new_user_registration_path %>
+            </p>
+          <% end %>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
