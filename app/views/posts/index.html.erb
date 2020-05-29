@@ -1,17 +1,18 @@
-<p id="notice"><%= notice %></p>
-
 <h1 class="title">Stories</h1>
 
 <div class="container">
   <% @posts.each do |post| %>
     <div class="story">
       <div class="story-title">
-        <%= post.title %>
+        <h3><%= post.title %></h3>
       </div>
-      <p class="story-body">
+      <div class="story-body">
         <%= post.body %>
-      </p>
+      </div>
       <% if user_signed_in? %>
+        <p>
+          Author:<%= @users.where(:id => (post.user_id)).pluck(:email)[0] %>
+        </p>
         <p>
           <%= link_to 'Show', post %>
           <%= link_to 'Edit', edit_post_path(post) %>

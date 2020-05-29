@@ -21,22 +21,23 @@
     <% end %>
 
     <div id="navbar" class="navbar-menu">
-      <div class="account-actions is-grouped">
+      <h1 class="website-title">TreeHouse Placeholder</h1>
+      <div class="top-nav-right">
         <% if user_signed_in? %>
-          <p>
+          <p class="navbar-menu-actions">
             <%= link_to current_user.email, edit_user_registration_path %>
           </p>
-          <p>
+          <p class="navbar-menu-actions">
             <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button is-info" %>
           </p>
-          <% else %>
-            <p>
-              <%= link_to "Log In", new_user_session_path %>
-            </p>
-            <p>
-              <%= link_to "Sign up!", new_user_registration_path %>
-            </p>
-          <% end %>
+        <% else %>
+          <p class="navbar-menu-actions">
+            <%= link_to "Log In", new_user_session_path %>
+          </p>
+          <p class="navbar-menu-actions">
+            <%= link_to "Sign up!", new_user_registration_path %>
+          </p>
+        <% end %>
       </div>
     </div>
 

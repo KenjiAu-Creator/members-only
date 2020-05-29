@@ -6,6 +6,9 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all.order("created_at DESC")
+    @users = User.all
+      # @post.each do |post|
+      #   @author = User.where(:id => @post.user_id)
   end
 
   # GET /posts/1
