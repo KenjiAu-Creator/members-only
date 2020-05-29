@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise', '~> 4.2'
-gem 'simple_form', '~> 4.0.1', '>= 3.2.1'
+gem 'simple_form', '~> 5.0.0'
 gem 'actionpack', '~> 5.0', '>= 5.0.0.1'
 
 group :development, :test do
