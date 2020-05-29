@@ -22,6 +22,8 @@ To get the application running after downloading the repository simply start the
 
   $ rails s
 
+To ensure that the application works properly on Heroku go into the Gem file and make sure that the SQLlite gem is replaced with the pg game.
+
 Contribute
 -----------
 
